@@ -1,0 +1,28 @@
+
+
+$(document).ready(function(){
+	$(' #youtube_video_upload .video_file').click(function(){
+		$(this).siblings('.errMsg').css("display", "none");
+		$(this).children('.errMsg2').css("display", "none");
+	});
+	$('#youtube_video_upload').submit(function(){
+		if ($(this).children('.video_file').val() == null || $(this).children('.video_file').val() == ""){
+			$(this).children('.errMsg').css("display", "");
+			return false;
+		}else if ($(this).children('.token').val() == null || $(this).children('.token').val() == ""){
+			$(this).children('.errMsg2').css("display", "");
+			return false;
+		}
+		$('#youtube_video_upload').children('.upload_button').attr('disabled', 'true');
+	});
+	
+	$.post('<%= url_for(:action => "uploadToken", :controller => "youtube", :only_path => false)%>', {title: $('titleBox').value, description: $('description').value} ,function(data){
+		if(data != ""){
+			$('#youtube_video_upload').attr('action', data.uploadUrl + '?nexturl=<%= url_for(:action => "new", :controller => "youtube", :only_path => false)%>');
+			$('#youtube_video_upload').children('.token').val(data.token);
+			$('#youtube_video_upload').children('.errMsg2').css("display", "none");
+		}else{
+
+		}
+	}, "json");
+});
