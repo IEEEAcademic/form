@@ -1,0 +1,140 @@
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>BackOffice</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Bootstrap -->
+            <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+            <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+            <link rel="stylesheet" href="css/bootstrap-fileupload.css" type="text/css">
+
+            <!-- JavaScript plugins (requires jQuery) -->
+            <script src="http://code.jquery.com/jquery.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+
+            <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+
+            <script type="text/javascript" src="js/bootstrap-select.js"></script>
+            <script src="js/bootstrap-fileupload.js"></script>
+            <script src="js/main.js"></script>
+
+          </head>
+          <body>
+
+
+            <div class="navbar" style="background-color:#333333; color:#FFF;">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a href="#" class="brand"><img src="img/global.png" style="max-width:250px"></a>
+                  <p class="navbar-text pull-right" style="margin-top:35px;">Signed in as
+                    <a href="#" class="navbar-link">Rui Costa</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              
+              <div class="col-lg-3">
+
+
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li class="active"><a href="#">Form</a></li>
+                  <li><a href="#">Messages<span class="badge pull-right">7</span></a></li>
+                </ul>
+
+              </div>
+
+              <div class="col-lg-9">
+
+
+                <div class="row panel panel-primary" style="margin-right:20px;">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      Form
+                    </div>
+                  </div>
+                  <div class="row well line" style="margin: 20px 10px;">
+
+                    <div class="col-lg-1">
+                    </div>
+
+                    <div class="col-lg-7">
+                      <p style="margin-top:10px;">Choose the option that suit you better...</p>
+                    </div>
+
+                    <div class="col-lg-4">
+
+                      <div class="select-container">
+                        <select class="selectpicker">
+                          <option selected>Add Video</option>
+                          <option>Add Prof</option>
+                          <option>Add Chapter</option>
+                          <option>Add Book</option>
+                        </select>
+                      </div>
+
+                    </div>
+
+                    <div class="form-content" >
+
+                      <div class="col-lg-1">
+                      </div>
+
+                      <div class="col-lg-6">
+
+                        <div style="margin-top:20px;">
+                          <div class="input-group">
+                            <span class="input-group-addon">Title</span>
+                            <input type="text" class="form-control" placeholder="Enter the title...">
+                          </div>
+                          <div class="input-group" style="margin-top:10px;">
+                            <span class="input-group-addon">Description</span>
+                            <input type="text" class="form-control" placeholder="Enter the description...">
+                          </div>
+                        </div>
+                        <div class="fileupload fileupload-new" data-provides="fileupload" style="margin-top:30px;">
+                          <div class="input-append">
+                            <div class="col-lg-7">
+                              <div class="uneditable-input form-control">
+                                <i class="icon-file fileupload-exists"></i>
+                                <span class="fileupload-preview"></span>
+                              </div>
+                            </div>
+                            <span class="btn btn-file btn-primary">
+                              <span class="fileupload-new">Select file</span>
+                              <span class="fileupload-exists">Change</span>
+                              <input type="file" />
+                            </span>
+                            <a href="#" class="btn fileupload-exists btn-primary" data-dismiss="fileupload">Remove</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-1"></div>
+                      <div class="col-lg-4" style="margin-top:65px;">
+                        <span class="btn btn-primary">Send Meta to Server</span>
+                      </div> 
+
+                    </div> 
+                  </div>
+
+                  <div class="btn btn-primary" id="plus-btn">
+                    +
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </body>
+          </html>
+
+
+
+
+
+
